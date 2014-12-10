@@ -3,10 +3,11 @@ using System.Collections;
 
 public class moveScript : MonoBehaviour {
 
-	public float speed;
+	public float speed, rotationSpeed;
 
 	public void Move (float h, float v) {
 		rigidbody.velocity = new Vector3(h, 0, v) * speed * Time.deltaTime;
+		Rotate();
 		//Stop(h,v);
 	}
 	
@@ -16,6 +17,16 @@ public class moveScript : MonoBehaviour {
 		}
 		if (v == 0){
 			rigidbody.velocity = new Vector3(rigidbody.velocity.x,0,0);
+		}
+	}
+	
+	void Rotate(){
+		if (rigidbody.velocity.magnitude != 0){
+			transform.rotation = Quaternion.Slerp(
+				transform.rotation, 
+				Quaternion.LookRotation(rigidbody.velocity),
+				Time.deltaTime * rotationSpeed
+			);
 		}
 	}
 }
