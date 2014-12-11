@@ -9,7 +9,11 @@ public class ropeScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	public void FireRope () {
+		print ("firing");
+	}
+
+	public void StopRope(){
+		print ("stopping");
 	}
 }
