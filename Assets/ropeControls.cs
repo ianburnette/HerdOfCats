@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ropeControls : MonoBehaviour {
 
-	bool p1Fire, p2Fire, ropeActive;
+	public bool p1Fire, p2Fire, ropeActive;
 	ropeScript rpScrpt;
 
 	// Use this for initialization
@@ -37,9 +37,9 @@ public class ropeControls : MonoBehaviour {
 			rpScrpt.FireRope();
 			ropeActive = true;
 		}
-		if ((!p1Fire || !p1Fire) && ropeActive) {
-			ropeActive = false;
+		if ((!p1Fire && p2Fire && ropeActive) || (p1Fire && !p2Fire && ropeActive)) {
 			rpScrpt.StopRope();
+			ropeActive = false;
 		}
 	}
 }

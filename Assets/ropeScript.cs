@@ -3,17 +3,18 @@ using System.Collections;
 
 public class ropeScript : MonoBehaviour {
 
-	// Use this for initialization
+	public GameObject rope, ropeObject;
+
 	void Start () {
-	
+		ropeObject = rope.transform.GetChild(0).gameObject;
+		ropeObject.SetActive (false);
 	}
-	
-	// Update is called once per frame
+
 	public void FireRope () {
-		print ("firing");
+		ropeObject.SetActive (true);
 	}
 
 	public void StopRope(){
-		print ("stopping");
+		ropeObject.SetActive (false);
 	}
 }
