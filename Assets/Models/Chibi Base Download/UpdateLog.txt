@@ -1,0 +1,7 @@
+Whenever I make a change to the file, I'll make sure to note it here.
+
+~Updates~
+06-21-13:
+    Changed .obj files to T-pose.
+06-12-13:
+    File's debut for download. (Woah, talk about trolls much... >.> /end obligatory Homestuck reference)

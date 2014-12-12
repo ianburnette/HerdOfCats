@@ -1,0 +1,11 @@
+Hello, this is Strawberries777.
+Before using this model, please read this.
+(TL;DR: STUFF IN FOLDER. I EDIT SOMETIME. YOU ME ASK QUESTION. GIVE ME CREDIT!)
+
+In the folder, you'll find the original photoshop files of the textures. The .blend files were originally made in Blender 2.65.1, so if you're using a different version and are experiencing some strange glitches, that may be why. I'll also export the models to an .obj format just in case you don't use Blender.
+
+I wasn't planning on putting this up for download so early, so I'll probably make a few changes every once in a while. (Like pretty-fying the rig with shapes for easier use.)
+
+If you have a quick question or two, let me know at either strawberries777.deviantart.com or strawberries777.tumblr.com and I'll try my best to answer them. Just so you know, though, I will not teach you how to use Blender if you don't know how. (I barely know how to use it myself. ;_;)
+
+Most importantly, please give credit where credit is due! I worked really hard on this and would appreciate it so much. Of course, you don't have to scream my name in everyone's face constantly, but at least inform them that I made the base in case they do ask or are implying that they think you made it...
