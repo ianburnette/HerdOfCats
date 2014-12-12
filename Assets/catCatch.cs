@@ -3,7 +3,7 @@ using System.Collections;
 
 public class catCatch : MonoBehaviour {
 
-	int curPlayer = 1;
+	int curPlayer = 0;
 	public Transform player1, player2;
 
 	// Use this for initialization

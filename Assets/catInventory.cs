@@ -3,30 +3,30 @@ using System.Collections;
 
 public class catInventory : MonoBehaviour {
 
-	public ArrayList catList = new ArrayList(10);
-	int catsInInventory = 0;
+	public Transform[] catList;
+	public int catsInInventory = 0;
 
 	// Use this for initialization
 	void Start () {
-	
+		catList = new Transform[10];
 	}
 	
 	// Update is called once per frame
 	public void AddCat (Transform newCat) {
-		catList.Add(newCat);
+		catList[catsInInventory] = newCat;
 		catsInInventory ++;
-		print ("added cat");
+	//	print ("added cat");
 	}
 	
 	public Transform GetLastCat(){
 		if (catsInInventory > 0){
-			Transform lastCat = catList[catsInInventory] as Transform;
+			Transform lastCat = catList[catsInInventory-1];
+			//catsInInventory ++;
 			return lastCat;
-			catsInInventory ++;
 		}
 		else{
 			return transform;
-			catsInInventory ++;
+			//catsInInventory ++;
 		}
 	}
 }

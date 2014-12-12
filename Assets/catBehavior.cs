@@ -42,12 +42,15 @@ public class catBehavior : MonoBehaviour {
 	public void SetTarget(Transform target){
 		//print ("setting target");
 		catInventory invScrpt = target.GetComponent<catInventory>();
-		invScrpt.AddCat(transform);
+		
 		followTarget = invScrpt.GetLastCat();
+		print ("followTarget is " + followTarget);
+		invScrpt.AddCat(transform);
 		nav.destination = followTarget.position;
 		nav.stoppingDistance = savedStoppingDistance;
 		saved = true;
 		gameObject.layer = 10;
+		transform.GetChild(0).gameObject.layer = 10;
 	}	
 	
 	public void Follow(){
