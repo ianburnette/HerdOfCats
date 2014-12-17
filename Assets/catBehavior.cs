@@ -11,6 +11,8 @@ public class catBehavior : MonoBehaviour {
 	public float initialStoppingDistance, savedStoppingDistance;
 	public Transform followTarget;
 	public LayerMask savedMask, groundMask;
+	playerAnimation plyrAnim;
+	Transform catSprite;
 
 	// Use this for initialization
 	void Start () {
@@ -18,10 +20,14 @@ public class catBehavior : MonoBehaviour {
 		nav.destination = waypoints [0];
 		nav.stoppingDistance = initialStoppingDistance;
 		PopulateWayPoints();
+		plyrAnim = GetComponent<playerAnimation>();
+		catSprite = transform.GetChild(1);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		plyrAnim.Animate(nav.velocity.x, nav.velocity.z);
+		MaintainOrientation();
 		if (!saved){
 			Wander();
 		}
@@ -68,5 +74,9 @@ public class catBehavior : MonoBehaviour {
 				i++;
 			}
 		}
+	}
+	
+	void MaintainOrientation(){
+		catSprite.eulerAngles = new Vector3(90,0,0);
 	}
 }

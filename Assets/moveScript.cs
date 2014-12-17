@@ -4,10 +4,16 @@ using System.Collections;
 public class moveScript : MonoBehaviour {
 
 	public float speed, rotationSpeed;
+	playerAnimation plyrAnim;
 
+	void Start(){
+		plyrAnim = GetComponent<playerAnimation>();
+	}
+	
 	public void Move (float h, float v) {
 		rigidbody.velocity = new Vector3(h, 0, v) * speed * Time.deltaTime;
-		Rotate();
+		plyrAnim.Animate(h,v);
+		//Rotate();
 		//Stop(h,v);
 	}
 	
